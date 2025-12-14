@@ -334,44 +334,6 @@ node_modules/.vite-cache/
 
 说明：该模板适配本项目技术栈，可直接复用，无需修改；核心作用是阻止依赖文件（node_modules）、构建产物、敏感信息被Git追踪并推送到GitHub。
 
-```plaintext
-
-# 依赖目录，无需ESLint检查
-node_modules/
-# 构建产物目录，无需检查
-dist/
-# 版本控制目录
-.git/
-# 编辑器配置目录
-.vscode/
-# 环境变量文件
-.env
-.env.*
-!.env.example
-# 其他静态资源目录（若有）
-public/
-# 备份文件
-*.bak
-# 日志文件
-logs/
-```
-
-## 7.6 配置文件使用说明
-
-- 所有模板中的注释可保留作为AI编程指引，实际部署前删除不影响功能；
-
-- React项目需固定使用`@vitejs/plugin-react`插件，严禁混用其他框架插件；
-
-- 依赖版本可更新，但需确保兼容性：Vite≥4.0.0、React≥18.0.0、Node.js≥20.0.0；
-
-- 部署子路径时，仅修改vite.config.js的`base`参数即可，其他配置无需调整；
-
-- 本地开发跨域代理（server.proxy）仅作用于开发环境，部署到Vercel后需通过Vercel环境变量或边缘函数处理跨域；
-
-- 执行`npm run lint`前，需确保.eslintrc.js和.eslintignore文件均已配置完成，避免检查无关文件或遗漏规范检查；
-
-- 若项目使用TypeScript，需额外安装对应依赖并调整配置，具体见下方TypeScript专属模板。
-
 ## 7.7 tsconfig.json模板（React+TypeScript+Vite适配）
 
 ```json
