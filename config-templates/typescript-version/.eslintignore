@@ -1,0 +1,18 @@
+# 依赖目录，无需ESLint检查
+node_modules/
+# 构建产物目录，无需检查
+dist/
+# 版本控制目录
+.git/
+# 编辑器配置目录
+.vscode/
+# 环境变量文件
+.env
+.env.*
+!.env.example
+# 其他静态资源目录（若有）
+public/
+# 备份文件
+*.bak
+# 日志文件
+logs/
